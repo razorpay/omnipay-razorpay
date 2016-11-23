@@ -1,0 +1,33 @@
+{
+	"name": "razorpay/omnipay-razorpay",
+	"description": "Razorpay Omnipay 2.0 plugin for accepting payments",
+    "require": {
+        "omnipay/common": "~2.0",
+        "razorpay/razorpay": "1.*"
+    },
+    "require-dev": {
+        "omnipay/tests": "~2.0"
+    },
+    "keywords": [
+      "razorpay", "payments", "india",
+      "payment gateway", "wallets", "netbanking"
+    ],
+    "authors": [
+        {
+            "name": "Mayank Amencherla",
+            "email": "mayank.amencherla@razorpay.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+      "email": "support@razorpay.com"
+    },
+    "homepage": "https://razorpay.com",
+    "type": "library",
+    "autoload": {
+        "psr-4": { "Omnipay\\Razorpay\\" : "src/" }
+    },
+    "license": [
+        "MIT"
+    ]
+}
