@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Omnipay\Razorpay\Message;
 
@@ -11,12 +11,12 @@ class Signature
 
 	public function getSignature(array $data)
     {
-        $valid_fields = array_filter(array_keys($data), function ($key)
+        $validFields = array_filter(array_keys($data), function ($key)
         {
-            return $key != 'x_signature' && substr($key,0,2) == 'x_';
+            return $key != 'x_signature' and substr($key,0,2) == 'x_';
         });
 
-        $data = array_intersect_key($data, array_flip($valid_fields));
+        $data = array_intersect_key($data, array_flip($validFields));
 
         //sort the array
         ksort($data);
