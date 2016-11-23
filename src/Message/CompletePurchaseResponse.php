@@ -8,7 +8,9 @@ class CompletePurchaseResponse extends PurchaseResponse
     {
         if (!empty($_POST['x_result']))
         {
-            $hmacKey = $this->data['key_secret'];
+            $data = parent::getRedirectData();
+
+            $hmacKey = $data['key_secret'];
             $razorpaySignature = $_POST['x_signature'];
 
             $verifySignature = new Signature($hmacKey);
