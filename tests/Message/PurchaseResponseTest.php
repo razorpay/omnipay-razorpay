@@ -1,8 +1,10 @@
 <?php
 
-namespace Omnipay\Razorpay\Message;
+namespace Omnipay\Razorpay\Tests\Message;
 
 use Omnipay\Tests\TestCase;
+use Omnipay\Razorpay\Message\PurchaseRequest;
+use Omnipay\Razorpay\Message\PurchaseResponse;
 
 class PurchaseResponseTest extends TestCase
 {

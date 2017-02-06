@@ -1,8 +1,9 @@
 <?php
 
-namespace Omnipay\Razorpay;
+namespace Omnipay\Razorpay\Tests;
 
 use Omnipay\Tests\GatewayTestCase;
+use Omnipay\Razorpay\CheckoutGateway;
 
 class GatewayTest extends GatewayTestCase
 {
