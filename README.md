@@ -7,13 +7,13 @@
 **Razorpay driver for the Omnipay PHP payment processing library**
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
-processing library for PHP 5.3+. This package implements Razorpay support for Omnipay.
+processing library for PHP. This package implements Razorpay support for Omnipay.
 
 To know more about Razorpay payment flow and steps involved, please read up here:
 <https://docs.razorpay.com/docs>
 
 ## Requirements
-`PHP >= 5.5.9`
+`PHP >= 5.6.0
 
 ## Installation
 
