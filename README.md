@@ -1,7 +1,7 @@
 # Omnipay: Razorpay
 
 [![Travis branch](https://travis-ci.org/razorpay/omnipay-razorpay.svg?branch=master)]()
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- [![Packagist](https://img.shields.io/packagist/v/symfony/symfony.svg)]() -->
 
 **Razorpay driver for the Omnipay PHP payment processing library**
