@@ -12,6 +12,9 @@ processing library for PHP 5.3+. This package implements Razorpay support for Om
 To know more about Razorpay payment flow and steps involved, please read up here:
 <https://docs.razorpay.com/docs>
 
+## Requirements
+`PHP >= 5.5.9`
+
 ## Installation
 
 Omnipay is installed via [Composer](http://getcomposer.org/). To install, simply add it
