@@ -1,8 +1,8 @@
 # Omnipay: Razorpay
 
-[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)]()
+[![Travis branch](https://travis-ci.org/razorpay/omnipay-razorpay.svg?branch=master)]()
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
-[![Packagist](https://img.shields.io/packagist/v/symfony/symfony.svg)]()
+<!-- [![Packagist](https://img.shields.io/packagist/v/symfony/symfony.svg)]() -->
 
 **Razorpay driver for the Omnipay PHP payment processing library**
 
@@ -13,7 +13,7 @@ To know more about Razorpay payment flow and steps involved, please read up here
 <https://docs.razorpay.com/docs>
 
 ## Requirements
-`PHP >= 5.6.0
+`PHP >= 5.6.0`
 
 ## Installation
 
