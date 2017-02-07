@@ -34,7 +34,9 @@ class PurchaseRequestTest extends TestCase
         ];
 
         // assert array was created correctly
-        $this->assertArraySubset($parameters, $data);
+        $this->assertSame($this->parameters['amount'], $data['x_amount']);
+        $this->assertSame($this->parameters['currency'], $data['x_currency']);
+        $this->assertSame($this->parameters['key_id'], $data['x_account_id']);
 
         // assert signature was created correctly
         $razorpaySignature = new Signature($this->parameters['key_secret']);
