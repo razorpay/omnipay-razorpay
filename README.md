@@ -1,5 +1,9 @@
 # Omnipay: Razorpay
 
+[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)]()
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![Packagist](https://img.shields.io/packagist/v/symfony/symfony.svg)]()
+
 **Razorpay driver for the Omnipay PHP payment processing library**
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
