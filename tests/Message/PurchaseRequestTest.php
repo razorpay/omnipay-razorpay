@@ -28,8 +28,8 @@ class PurchaseRequestTest extends TestCase
         $data = $this->request->getData();
 
         $parameters = [
-            'x_amount' => $this->parameters['amount'],
-            'x_currency' => $this->parameters['currency'],
+            'x_amount'     => $this->parameters['amount'],
+            'x_currency'   => $this->parameters['currency'],
             'x_account_id' => $this->parameters['key_id'],
         ];
 
