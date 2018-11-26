@@ -1,13 +1,7 @@
 {
-	"name": "razorpay/omnipay-razorpay",
-	"description": "Razorpay Omnipay 2.0 plugin for accepting payments",
-    "require": {
-        "omnipay/common": "~2.0",
-        "razorpay/razorpay": "1.*"
-    },
-    "require-dev": {
-        "omnipay/tests": "~2.0"
-    },
+    "name": "razorpay/omnipay-razorpay",
+    "description": "Razorpay Omnipay 3.0 plugin for accepting payments",
+
     "keywords": [
       "razorpay", "payments", "india",
       "payment gateway", "wallets", "netbanking"
@@ -26,6 +20,18 @@
     "type": "library",
     "autoload": {
         "psr-4": { "Omnipay\\Razorpay\\" : "src/" }
+    },
+    "require": {
+        "omnipay/common": "~3.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "~3.0",
+        "squizlabs/php_codesniffer": "^3"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
     },
     "license": [
         "MIT"
