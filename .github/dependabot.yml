@@ -6,7 +6,3 @@ updates:
     interval: daily
     time: "04:00"
     timezone: Asia/Calcutta
-  ignore:
-  - dependency-name: razorpay/razorpay
-    versions:
-    - 2.5.0
