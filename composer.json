@@ -3,7 +3,7 @@
 	"description": "Razorpay Omnipay 2.0 plugin for accepting payments",
     "require": {
         "omnipay/common": "~2.0",
-        "razorpay/razorpay": "1.*"
+        "razorpay/razorpay": "1.* || 2.*"
     },
     "require-dev": {
         "omnipay/tests": "~2.0"
