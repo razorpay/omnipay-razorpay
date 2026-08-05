@@ -2,11 +2,21 @@
 	"name": "razorpay/omnipay-razorpay",
 	"description": "Razorpay Omnipay 2.0 plugin for accepting payments",
     "require": {
-        "omnipay/common": "~2.0",
-        "razorpay/razorpay": "1.*"
+        "php": "^8.1",
+        "omnipay/common": "^3.2",
+        "razorpay/razorpay": "^2.9"
     },
     "require-dev": {
-        "omnipay/tests": "~2.0"
+        "omnipay/tests": "^4.1",
+        "php-http/guzzle7-adapter": "^1.0"
+    },
+    "config": {
+        "platform": {
+            "php": "8.1.0"
+        },
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
     },
     "keywords": [
       "razorpay", "payments", "india",
