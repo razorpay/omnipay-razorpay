@@ -8,7 +8,7 @@ use Omnipay\Razorpay\Message\PurchaseRequest;
 
 class PurchaseRequestTest extends TestCase
 {
-    public function setUp()
+    protected function setUp(): void
     {
         $this->request = new PurchaseRequest($this->getHttpClient(), $this->getHttpRequest());
 
@@ -37,6 +37,10 @@ class PurchaseRequestTest extends TestCase
         $this->assertSame($this->parameters['amount'], $data['x_amount']);
         $this->assertSame($this->parameters['currency'], $data['x_currency']);
         $this->assertSame($this->parameters['key_id'], $data['x_account_id']);
+
+        // Hosted checkout signs x_test as the string "false"; a boolean would
+        // post as an empty value and fail verification.
+        $this->assertSame('false', $data['x_test']);
 
         // assert signature was created correctly
         $razorpaySignature = new Signature($this->parameters['key_secret']);

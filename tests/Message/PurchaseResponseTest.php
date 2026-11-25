@@ -8,7 +8,7 @@ use Omnipay\Razorpay\Message\PurchaseResponse;
 
 class PurchaseResponseTest extends TestCase
 {
-    public function setUp()
+    protected function setUp(): void
     {
         $this->request = new PurchaseRequest($this->getHttpClient(), $this->getHttpRequest());
 

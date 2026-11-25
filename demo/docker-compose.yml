@@ -1,0 +1,10 @@
+services:
+  demo:
+    build:
+      context: ..
+      dockerfile: demo/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID:-}
+      RAZORPAY_KEY_SECRET: ${RAZORPAY_KEY_SECRET:-}

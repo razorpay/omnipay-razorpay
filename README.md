@@ -41,6 +41,27 @@ The following gateways are provided by this package:
 For general usage instructions, please see the main [Omnipay](https://github.com/thephpleague/omnipay)
 repository.
 
+## Completing a payment
+
+The callback Razorpay posts back to your return URL arrives through the shopper's
+browser, so it is not trusted on its own. `completePurchase()` re-reads the
+payment from the Razorpay API with your key and only reports success when that
+payment is `captured` and matches the order.
+
+Pass the order you are completing, not values read from the callback:
+
+```php
+$response = $gateway->completePurchase([
+    'transactionId' => $order->reference,   // the x_reference you sent at purchase
+    'amount'        => $order->total,       // decimal, e.g. '10.00'
+    'currency'      => $order->currency,
+])->send();
+
+if ($response->isSuccessful()) {
+    // money is captured and matched to this order
+}
+```
+
 
 If you are having general issues with Omnipay, we suggest posting on
 [Stack Overflow](http://stackoverflow.com/). Be sure to add the

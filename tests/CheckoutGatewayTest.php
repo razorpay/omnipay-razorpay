@@ -5,9 +5,9 @@ namespace Omnipay\Razorpay\Tests;
 use Omnipay\Tests\GatewayTestCase;
 use Omnipay\Razorpay\CheckoutGateway;
 
-class GatewayTest extends GatewayTestCase
+class CheckoutGatewayTest extends GatewayTestCase
 {
-    public function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
