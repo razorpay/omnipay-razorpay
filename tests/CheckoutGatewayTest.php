@@ -7,7 +7,7 @@ use Omnipay\Razorpay\CheckoutGateway;
 
 class GatewayTest extends GatewayTestCase
 {
-    public function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
