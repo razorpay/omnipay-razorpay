@@ -130,7 +130,7 @@ $scenarios = array(
 
     <?php if (is_array($payload)): ?>
         <div class="card">
-            <h2>2. The signed form the browser posts to hosted checkout</h2>
+            <h2>2. The signed form the driver produces</h2>
             <table>
                 <tr><th>Field</th><th>Value</th></tr>
                 <?php foreach ($payload as $field => $value): ?>
@@ -138,19 +138,19 @@ $scenarios = array(
                 <?php endforeach; ?>
             </table>
 
-            <div class="actions">
-                <form method="post" action="https://checkout.razorpay.com/integration/shopify">
-                    <?php foreach ($payload as $field => $value): ?>
-                        <input type="hidden" name="<?= h($field) ?>" value="<?= h($value) ?>">
-                    <?php endforeach; ?>
-                    <button type="submit" <?= ($keyId === '' || $keySecret === '') ? 'disabled' : '' ?>>Pay on Razorpay (test mode)</button>
-                </form>
+            <div class="banner warn" style="margin:16px 0 0">
+                <strong>Live hosted checkout cannot accept this form.</strong>
+                Hosted validates the callback URL in <code>Shopify::isValidCallbackUrl()</code>: it must be
+                <code>https</code>, a <code>*.myshopify.com</code> host, and exactly the path
+                <code>/services/ping/notify_integration/razorpay_cards_upi_netbanking_wallets_/6183780442</code>.
+                A merchant's own return URL can never satisfy that, so the endpoint only serves Shopify
+                storefronts — the driver cannot complete a payment for anyone else. Use the simulator below,
+                which runs the same <code>isSuccessful()</code> over the same payload shape.
             </div>
-            <p class="note">Paying sends the browser to hosted checkout; the callback comes back to <code><?= h(demo_base_url()) ?>/callback.php</code>.</p>
         </div>
 
         <div class="card">
-            <h2>3. Or simulate the callback</h2>
+            <h2>3. Simulate the callback</h2>
             <form method="post" action="callback.php">
                 <label>Scenario
                     <select name="scenario">
