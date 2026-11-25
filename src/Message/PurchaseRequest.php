@@ -42,7 +42,10 @@ class PurchaseRequest extends AbstractRequest
                     'x_reference'                    => $this->getTransactionId(),
                     'x_shop_country'                 => $card->getCountry(),
                     'x_signature'                    => '',
-                    'x_test'                         => false, // set in .env
+                    // Hosted checkout signs and expects the strings "true"/"false".
+                    // A boolean renders as value="" in the form, which posts an
+                    // empty string and fails signature verification.
+                    'x_test'                         => 'false',
                     'x_url_callback'                 => $this->getReturnUrl(),
                     'x_url_cancel'                   => $this->getCancelUrl(),
                     'x_url_complete'                 => $this->getReturnUrl()

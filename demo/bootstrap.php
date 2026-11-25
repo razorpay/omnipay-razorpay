@@ -50,7 +50,11 @@ function demo_gateway()
     $httpClient = new \Omnipay\Common\Http\PsrClient(new \GuzzleHttp\Client(), $factory, $factory);
     $httpRequest = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
 
-    return new CheckoutGateway($httpClient, $httpRequest);
+    $gateway = new CheckoutGateway($httpClient, $httpRequest);
+    $gateway->setKeyID(demo_key_id());
+    $gateway->setKeySecret(demo_key_secret());
+
+    return $gateway;
 }
 
 function demo_store_path(): string
